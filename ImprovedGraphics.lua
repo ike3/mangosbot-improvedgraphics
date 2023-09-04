@@ -1,0 +1,50 @@
+local IG_EventFrame = CreateFrame("Frame")
+IG_EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+IG_EventFrame:Hide()
+
+function runAddonCommands()
+    ConsoleExec("overridefarclip 1")
+    ConsoleExec("horizonfarclip 6226")
+    ConsoleExec("groundeffectdensity 256")
+    ConsoleExec("smallcull 0")
+    ConsoleExec("characterAmbient")
+    ConsoleExec("extshadowquality 4")
+    ConsoleExec("farclip 1000")
+    ConsoleExec("horizonFarclipScale 6")
+    ConsoleExec("skycloudlod 3")
+    ConsoleExec("waterDetail 3")
+    ConsoleExec("reflectionMode 3")
+    ConsoleExec("rippleDetail 2")
+    ConsoleExec("shadowmode 3")
+    ConsoleExec("shadowtexturesize 2048")
+    ConsoleExec("particleDensity 100")
+    ConsoleExec("environmentDetail 150")
+    ConsoleExec("groundEffectDist 600")
+    ConsoleExec("groundEffectFade 1277")
+    ConsoleExec("spellEffectLevel 20")
+    ConsoleExec("ffxGlow 1")
+    ConsoleExec("ffxspecial 1")
+    ConsoleExec("ffxnetherworld 1")
+    ConsoleExec("ffxDeath 1")
+    ConsoleExec("sunshafts 2")
+    ConsoleExec("textureFilteringMode 5")
+    ConsoleExec("terrainMipLevel 0")
+    ConsoleExec("ssao 2")
+    ConsoleExec("ssaoblur 2")
+    ConsoleExec("weatherDensity 3")
+    ConsoleExec("gxmultiesample 8")
+    ConsoleExec("violencelevel 5")
+    ConsoleExec("componentTextureLevel 9")
+end
+
+IG_EventFrame:SetScript("OnEvent",
+    function(self, event, ...)
+        runAddonCommands()
+    end)
+
+SLASH_IG1 = '/ig'
+function SlashCmdList.IG(msg, editbox)
+    runAddonCommands()
+end
+
+print("ImprovedGraphics", "Addon", "is", "loaded");

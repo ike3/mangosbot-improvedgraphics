@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: ImprovedGraphics
+## Author: ike3
+## Notes: ImprovedGraphics UI
+## DefaultState: Enabled
+## LoadOnDemand: 0
+##SavedVariables: frameopts
+ImprovedGraphics.lua
+ImprovedGraphics.xml
