@@ -35,6 +35,7 @@ function runAddonCommands()
     ConsoleExec("gxmultiesample 8")
     ConsoleExec("violencelevel 5")
     ConsoleExec("componentTextureLevel 9")
+    ConsoleExec("frillDensity 256")
 end
 
 IG_EventFrame:SetScript("OnEvent",
